@@ -41,7 +41,10 @@ public class Sleep {
     @Column(columnDefinition="TEXT")
     private String notes;
 
+    @Column(insertable = false, updatable = false)
     private LocalDateTime createdAt;
+
+    @Column(insertable = false)
     private LocalDateTime updatedAt;
 
     public void calcSleepDuration() {
