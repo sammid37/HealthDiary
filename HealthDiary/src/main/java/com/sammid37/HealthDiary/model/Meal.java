@@ -51,6 +51,9 @@ public class Meal {
     @Column(columnDefinition="TEXT")
     private String notes;
 
+    @Column(updatable = false, insertable = false)
     private LocalDateTime createdAt;
+
+    @Column(insertable = false)
     private LocalDateTime updatedAt;
 }
